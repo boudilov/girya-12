@@ -1,0 +1,12 @@
+# Резервные копии и архивы
+backup_*/
+*.zip
+
+# Системные файлы
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Редакторы
+.vscode/
+.idea/
