@@ -6,6 +6,12 @@
   <meta name="theme-color" content="#191919">
   <meta name="description" content="Интерактивный план тренировок с гирей 12 кг на 28 дней: календарь, упражнения и отметки прогресса.">
   <title>Гиря 12 — план на 28 дней</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Гиря 12">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon-180.png">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./src/styles.css">
 </head>
@@ -256,6 +262,13 @@
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
   <script defer src="./src/main.js"></script>
 </body>
 </html>
